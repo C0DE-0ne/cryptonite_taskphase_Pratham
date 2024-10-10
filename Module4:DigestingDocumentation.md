@@ -10,7 +10,7 @@ pwn.college{QmkwPXP7fsF8-VJ0MeYsWnNmeLO.dRjM5QDL4ADO0czW}
 ``
 
 # 2.Learning complex Usage
-
+Here the --printf id used to print arbitary files on the terminal
 Command line:
 
 ``
@@ -20,7 +20,7 @@ pwn.college{MM6BFBU2U53QTX13LcDY8adIdb6.dVjM5QDL4ADO0czW}
 ``
 
 # 3.Reading Manuals
-
+So the command man is used to read a manual. In this challenge we have to read the manual to get the arguement.
  Command line:
 
  ``
@@ -63,7 +63,7 @@ Correct usage! Your flag: pwn.college{cbwg-eGP6pOMO0i29brdJ5yQa9Z.dRTM4QDL4ADO0c
 ``
 
 # 4.Searching for manuals
-
+We can search through a manual using /. The challenge requried us to search for the arguement which gives the flag.
 Command line:
 
 ``
@@ -74,7 +74,7 @@ Correct usage! Your flag: pwn.college{AlRopeL8CNn606a7b0iKOxpuszc.dVTM4QDL4ADO0c
 ``
 
 # 5.Searching for Manual
-
+First we use man man to see the commands of the manual -k/challenge/challenge to serach for challenge 
 Command line:
 
 `
@@ -117,7 +117,7 @@ Correct usage! Your flag: pwn.college{I_IH34-Q_q_k0kgSpNTYyqtQ-xP.dZTM4QDL4ADO0c
 `
 
 # 6.Helpful programs
-
+Here command --help,==h,--? tells us how to run the manual. For the we have to use help for the arguement and the value.
 Command line:
 
 `
@@ -129,7 +129,7 @@ Correct usage! Your flag: pwn.college{YvozxFdI8CmecKWONuSSb2dJA71.ddjM4QDL4ADO0c
 `
 
 # 7.Help for builtins
-
+Seeing that some commands are bultin like help. so to get the flag we have use help on challenge and get the arguement and value from it.
 Command line:
 
 `
