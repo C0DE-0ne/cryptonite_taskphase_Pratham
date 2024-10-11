@@ -45,6 +45,7 @@ hacker@piping~redirecting-more-output:~$ cat myflag
 [FLAG] pwn.college{8Yf8B7BG-pPMPRD5tl8U836ZeT8.dVjN1QDL4ADO0czW}
  
  # Appending output
+So here we use >> to append data into files instead of > which overwrites data into it.
 
  Command line:
 
@@ -103,7 +104,7 @@ overwrote the initial write of the first half directly to the file. Try append
 mode!
 
 # Redirecting errors
-
+Here we learn that FD 0: Standard Input,FD 1: Standard Output,FD 2: Standard Error. So to the flag we use  > with  2.
 Command line:
 
 `
@@ -119,6 +120,7 @@ hacker@piping~redirecting-errors:~$ cat myflag
 [FLAG] pwn.college{QU-4L3qRmB2y2pQY8xfB-iwEBBz.ddjN1QDL4ADO0czW}
  
 # Redirecting input
+< is used to redirect input to programs. To get the flag we have to redirect PWN to /challenge/run.
 
 Command line:
 
@@ -135,8 +137,8 @@ Here is your flag:
 pwn.college{UjNftJtc2n_4SzA9w9m_IZpcUiL.dBzN1QDL4ADO0czW}
 `
 
-# Grepping live output
-
+# Grepping stored results
+The command grep helps use search through files. To get the flag we have to redirect outouts of two given programs which will give use 100 and 100s of line of text, here we use grep with its path as the arguement.
 Command line:
 
 `
