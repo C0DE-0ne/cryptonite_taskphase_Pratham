@@ -102,6 +102,22 @@ rather than *append* mode (>>), and so the write of the second half to stdout
 overwrote the initial write of the first half directly to the file. Try append
 mode!
 
+# Redirecting errors
+
+Command line:
+
+`
+hacker@piping~redirecting-errors:~$ /challenge/run > myflag 2>instructions
+`
+
+`
+hacker@piping~redirecting-errors:~$ cat myflag
+`
+
+[FLAG] Here is your flag:
+
+[FLAG] pwn.college{QU-4L3qRmB2y2pQY8xfB-iwEBBz.ddjN1QDL4ADO0czW}
+ 
 # Redirecting input
 
 Command line:
@@ -240,6 +256,51 @@ hacker@piping~grepping-errors:~$ /challenge/run 2>&1 |grep pwn.college
 
 `
 pwn.college{Y7b82Dmx41vsmpFF25amUmvN5IR.dVDM5QDL4ADO0czW}
+`
+
+# Duplicating piped data with tee
+
+Command line:
+
+`
+hacker@piping~duplicating-piped-data-with-tee:~$ /challenge/pwn | tee key |/challenge/college
+`
+
+Processing...
+
+The input to 'college' does not contain the correct secret code! This code
+should be provided by the 'pwn' command. HINT: use 'tee' to intercept the
+output of 'pwn' and figure out what the code needs to be.
+
+`hacker@piping~duplicating-piped-data-with-tee:~$ cat key`
+
+Usage: /challenge/pwn --secret [SECRET_ARG]
+
+SECRET_ARG should be "Yl-GL_S9"
+
+`hacker@piping~duplicating-piped-data-with-tee:~$ /challenge/`
+
+pwn --secret Yl-GL_S9|/challenge/college
+
+Processing...
+Correct! Passing secret value to /challenge/college...
+Great job! Here is your flag:
+
+`pwn.college{Yl-GL_S9LNRCYnfRVtoXTuhJkKR.dFjM5QDL4ADO0czW}`
+
+# Write to multiple programs
+
+Command line:
+
+`
+hacker@piping~writing-to-multiple-programs:~$ /challenge/hack | tee >(/challenge/the) | /challenge/planet
+`
+
+Congratulations, you have duplicated data into the input of two programs! Here
+is your flag:
+
+`
+pwn.college{cUGCuhmP6EkTUhzyOP3IWCGcM_Z.dBDO0UDL4ADO0czW}
 `
 
 # Spli-piping stderr and stdout
