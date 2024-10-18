@@ -1,4 +1,5 @@
 # Becoming root with su 
+For the flag we had to switch to root using the command `su` and it's password.
 
 Commmand line:
 
@@ -11,6 +12,7 @@ Password: hack-the-planet
 pwn.college{ovMp6pFAIcMcmcIRuoCBk778iWq.dVTN0UDL4ADO0czW}
 
 # Other users with su
+Here we had to switch to a user instead of root.
 
 Command line:
 
@@ -25,6 +27,7 @@ Congratulations, you have become Zardus! Here is your flag:
 pwn.college{0BjsIwlh97hJpdCtF33KlARqDxC.dZTN0UDL4ADO0czW}
 
 # Cracking passwords
+First we had to crack the password using john the ripper from the leak of /etc/shadow (in /challenge/shadow-leak). Then we su to zardus using the cracked password and run `/challenge/run` for the flag.
 
 Command line:
 
@@ -55,6 +58,7 @@ Congratulations, you have become Zardus! Here is your flag:
 pwn.college{8oz8yI6McrAfgeJ2ok4hfVe2fmG.ddTN0UDL4ADO0czW}
 
 # Using sudo
+Use the command `sudo`, which will allow us to read /flag.
 
 Command line:
 
