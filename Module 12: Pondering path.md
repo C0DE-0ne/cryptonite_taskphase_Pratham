@@ -1,4 +1,5 @@
-# The path variable
+# The PATH variable
+The PATH variable stores a bunch of directory paths.FOr the flag we run `PATH=""` to export path variable as empty string which we prevent the program from accessing the rm command.
 
 Command line:
 
@@ -12,6 +13,7 @@ pwn.college{skRDGcyF2P0n4na1Jpql0TtW5Ds.dZzNwUDL4ADO0czW}
 ```
 
 # Setting path
+In this challenge we need to run the `/challenge/run` to execute the win command. We add the path of the command to PATH variable and then run the program to get the flag.
 
 Command line:
 
@@ -24,6 +26,14 @@ pwn.college{YdOQY7_46MkzXp-S49TO3PTUEue.dVzNyUDL4ADO0czW}
 ```
 
 # Adding commands
+Here first we crete a file win using `nano` 
+```
+read Flag < /flag
+echo $Flag
+```
+Then we make it executable for all using `chmod a+x win`
+We add the path to the PATH variable.
+For the flag we run the program `/challenge/run`
 
 Command line:
 
