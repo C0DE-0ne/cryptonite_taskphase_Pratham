@@ -42,7 +42,7 @@ hacker@path~adding-commands:~$ touch win
 hacker@path~adding-commands:~$ nano win
 hacker@path~adding-commands:~$ echo $PATH
 /run/challenge/bin:/run/workspace/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-hacker@path~adding-commands:~$ export PATH=/home/hacker:$PATH
+hacker@path~adding-commands:~$ PATH=/home/hacker
 hacker@path~adding-commands:~$ echo $PATH
 /home/hacker:/run/challenge/bin:/run/workspace/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 hacker@path~adding-commands:~$ chmod a+x /home/hacker/win
@@ -52,6 +52,12 @@ pwn.college{0MV3bv5dfzFxROAyFETd-pCqhPY.dZzNyUDL4ADO0czW}
 ```
 
 # Hijacking commands
+So we have to execute th script named rm before the program uses the rm command to delete the flag
+th script is
+```
+read Flag < /flag
+echo $Flag
+```
 
 Command line:
 
